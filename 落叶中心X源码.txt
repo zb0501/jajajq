@@ -105,70 +105,70 @@ local OH = Window:Tab("火箭发射模拟",'16060333448')
 
 local UR = Window:Tab("超级大力士",'16060333448')
 local RU = UR:section("主要的",真)
-local OR = UR:section("其他“，真)
-当地QS = UR:section("位置传送“，真)
+local OR = UR:section("其他",真)
+当地QS = UR:section("位置传送",真)
 
-本地OSQ =窗口:选项卡("战争大亨",'16060333448')
-本地QOS = OSQ:section(“主要“，真)
-本地SQO = OSQ:section(“其他“，真)
-local Tab2 = OSQ:section("传送位置“，真)
+本地OSQ =窗口：选项卡("战争大亨",'16060333448')
+本地QOS = OSQ:节(“主要",真)
+本地SQO = OSQ:节(“其他",真)
+local Tab2 = OSQ:section("传送位置",真)
 
-bin:标签("你的用户名:"..游戏。Players.LocalPlayer.Name)
+bin:标签("你的用户名:"..游戏1000名球员。本地播放器.名称)
 bin:标签("你的注入器:"..identifyexecutor())
-bin:标签("服务器id:"..游戏。GameId)
+bin:标签("服务器id:"..游戏. GameId)
 
-关于:标签("作者kr X”)
-关于:标签("作者qq3648447529”)
-about:Label("正在努力优化")
+关于：标签("作者kr X”)
+关于:标签("群聊”)
+关于:标签("正在努力优化")
 关于:标签("请勿倒卖")
-关于:按钮("复制作者QQ "，功能()
-    setclipboard("3648447529")
-end)
-about:Button("复制QQ群", function()
-    setclipboard("341063007")
-end)
-about:Toggle("移除UI辉光", "DHG", false, function(DHG)
-    if DHG then
-        game:GetService("CoreGui")["frosty is cute"].Main.DropShadowHolder.Visible = false
-    else
-game:get service(" CoreGui ")[" frosty很可爱"]. main . drop shadow holder . visible = true
+关于：按钮("复制作者QQ”，功能()
+setclipboard("群聊 ")
+结束)
+关于:按钮("复制即时通信软件群“，函数()
+setclipboard("341063007 ")
+结束)
+关于：切换("移除用户界面辉光”、“DHG”，假、函数(DHG)
+如果DHG那么
+game:get service(" CoreGui ")[" frosty很可爱"]. main . drop shadow holder . visible = false。
+其他
+游戏:获取服务(" CoreGui ")[" frosty很可爱"].主要的。放下阴影支架。可见=真
 结束
 结束)
-关于:切换("彩虹UI "，" RBUI "，false，函数(RBUI)
+关于：切换("彩虹UI”，“RBUI”，false，函数(RBUI)
 如果RBUI那么
-game:get service(" CoreGui ")[" frosty很可爱"].Main.Style = "DropShadow "
+游戏:获取服务(" CoreGui ")[" frosty很可爱"].Main.Style = "DropShadow "
 其他
-game:get service(" CoreGui ")[" frosty很可爱"].Main.Style = "Custom "
+游戏:获取服务(" CoreGui ")[" frosty很可爱"].Main.Style = "Custom "
 结束
 结束)
 关于:按钮("摧毁界面“，函数()
-游戏:GetService("CoreGui")[《霜降很可爱》]:Destroy()
+游戏:GetService("CoreGui")[《霜降很可爱》):销毁()
 结束)
 
 常规:滑块("步行速度!"，“WalkSpeed”，游戏。players . local player . character . humanoid . walk Speed，16，400，false，function(Speed)
-spawn(function()而task.wait()做游戏。players . local player . character . humanoid . walk Speed = Speed end end)
+spawn(函数()而task.wait()做游戏1000名球员。本地玩家。性格。人形的。步行速度=速度终点终点)
 结束)
-常规:滑块("跳跃高度!"，“JumpPower”，游戏。players . local player . character . humanoid . Jump power，50，400，false，function(Jump)
-spawn(function()而task.wait()做游戏。players . local player . character . humano . Jump power = Jump end end)
+常规：滑块("跳跃高度!"，“JumpPower”，游戏1000名球员。本地玩家。性格。人形的。跳跃功率，50，400，假，函数(跳跃)
+spawn(函数()而task.wait()做游戏1000名球员。本地玩家。性格。humano。跳跃功率=跳跃结束结束)
 结束)
 常规:文本框("重力设置!"，“万有引力”输入“，功能(重力)
-spawn(function()而task.wait()做游戏。Workspace.Gravity =重力端end)
+spawn(函数()而task.wait()做游戏工作空间。重力=重力端结束)
 结束)
 常规:切换("夜视“光”，假，功能(光)
-spawn(function()while task . wait()do if Light then game。Lighting.Ambient = Color3.new(1，1，1) else游戏。Lighting.Ambient = Color3.new(0，0，0) end end end)
-end)
-General:Button("透视", function()
-  local Players = game:GetService("Players"):GetChildren() local RunService = game:GetService("RunService") local highlight = Instance.new("Highlight") highlight.Name = "Highlight" for i, v in pairs(Players) do repeat wait() until v.Character if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then local highlightClone = highlight:Clone() highlightClone.Adornee = v.Character highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart") highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop highlightClone.Name = "Highlight" end end game.Players.PlayerAdded:Connect(function(player) repeat wait() until player.Character if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then local highlightClone = highlight:Clone() highlightClone.Adornee = player.Character highlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart") highlightClone.Name = "Highlight" end end) game.Players.PlayerRemoving:Connect(function(playerRemoved) playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy() end) RunService.Heartbeat:Connect(function() for i, v in pairs(Players) do repeat wait() until v.Character if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then local highlightClone = highlight:Clone() highlightClone.Adornee = v.Character highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart") highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop highlightClone.Name = "Highlight" task.wait() end end end)
-end)
-General:Button("隐身道具", function()
-  loadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)",true))()
-end)
+spawn(函数()while task。等待()做如果轻，然后游戏.照明。Ambient = Color3.new(1，1，1) else游戏照明。Ambient = Color3.new(0，0，0) end end)
+结束)
+常规:按钮("透视“，函数()
+本地玩家=游戏:获取服务(“玩家”):获取子()本地运行服务=游戏:获取服务(“运行服务”)本地高亮=实例。新得(“突出显示”)突出显示.Name = "Highlight" for i，v pairs(玩家)do重复等待()直到五.性格如果不是v . Character:findfirst child(" HumanoidRootPart "):findfirst child(" Highlight ")然后本地高光克隆= Highlight:Clone()高光克隆.adornee = v .字符高亮克隆.parent = v . Character:findfirst child(" HumanoidRootPart ")高亮克隆.DepthMode = Enum .HighlightDepthMode .AlwaysOnTop highlightClone .Name = "Highlight "结束结束游戏1000名球员。PlayerAdded:Connect(函数(播放器)重复等待()直到玩家.角色如果不是玩家character:findfirst child(" HumanoidRootPart "):findfirst child(" Highlight ")然后本地高光克隆= Highlight:Clone()高光克隆.Adornee =玩家。字符高亮克隆。家长=玩家人物:findfirst child(“HumanoidRootPart”)高亮克隆。Name = "高光" end end)游戏1000名球员。玩家移除:连接(函数(运动员离开)发球.心跳:连接(函数()用于I，v对(玩家)做重复华盛顿它()直到五.性格如果不是v . Character:findfirst child(" HumanoidRootPart "):findfirst child(" Highlight ")然后本地高光克隆= Highlight:Clone()高光克隆.adornee = v .字符高亮克隆.parent = v . Character:findfirst child(" HumanoidRootPart ")高亮克隆.DepthMode = Enum .AlwaysOnTop highlightClone .玩家已移除。人物:findfirtschild(" HumanoidRootPart ").亮点:Destroy() end) RunService .心跳:连接(函数()用于I，v对(玩家)做重复等待()直到五.性格如果不是五.人物:findfirst child("人oidRootPart "):findfirst child(" Highlight ")然后本地高光克隆= Highlight:Clone()高光克隆.adornee = v .字符高亮克隆.parent = v . Character:findfirst child(" HumanoidRootPart ")高亮克隆.DepthMode = Enum .AlwaysOnTop highlightClone .name = " Highlight " task . wait()end end end)
+结束)
+常规:按钮("隐身道具“，函数()
+loadstring(game:http get(" https://gist . githubusercontent . com/skid 123 skidol/CD 0 D2 DCE 51 B3 f 20 ad 1 AAC 941 da 06 a 1 a 1/raw/f 58 b 98 CCE 7d 51 e 53 ade 94 e 7 bb 460 E4 f 24 FB 7 e 0 ff/% 257 bfe % 257d % 2520 invisible % 2520 tool % 2520(can % 2520 hold % 2520 tools)"，true
+结束)
 常规:切换("穿墙（可用)，“NoClip”，false，函数(NC)
   local Workspace = game:GetService("Workspace") local Players = game:GetService("Players") if NC then Clipon = true else Clipon = false end Stepped = game:GetService("RunService").Stepped:Connect(function() if not Clipon == false then for a, b in pairs(Workspace:GetChildren()) do if b.Name == Players.LocalPlayer.Name then for i, v in pairs(Workspace[Players.LocalPlayer.Name]:GetChildren()) do if v:IsA("BasePart") then v.CanCollide = false end end end end else Stepped:Disconnect() end end)
-end)
+结束)
 
 GX:Button("最强透视",function()
-  loadstring(game:HttpGet("https://pastebin.com/raw/uw2P2fbY"))()
+loadstring(game:http get(" https://pastebin . com/raw/uw 2 p 2 fby "))()
 end)
 GX:Button("飞行v3",function()
   loadstring(game:HttpGet'https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt')()
@@ -268,16 +268,16 @@ BP:Toggle("刷新时通知", "TZ", false, function(TZ)
 end)
 BP:Toggle("自动躲避Rush/Ambush", "ADB", false, function(ADB)
     _G.Avoid = (ADB and true or false) workspace.ChildAdded:Connect(function(inst) if inst.Name == "RushMoving" and _G.Avoid == true then Notify("请注意!", "正在躲避 Rush.","rbxassetid://17360377302",3) local OldPos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position local con = game:GetService("RunService").Heartbeat:Connect(function() game.Players.LocalPlayer.Character:MoveTo(OldPos + Vector3.new(0,20,0)) end) inst.Destroying:Wait() con:Disconnect() game.Players.LocalPlayer.Character:MoveTo(OldPos) elseif inst.Name == "AmbushMoving" and _G.Avoid == true then Notify("注意!", "正在躲避 Ambush.","rbxassetid://17360377302",3) local OldPos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position local con = game:GetService("RunService").Heartbeat:Connect(function() game.Players.LocalPlayer.Character:MoveTo(OldPos + Vector3.new(0,20,0)) end) inst.Destroying:Wait() con:Disconnect() game.Players.LocalPlayer.Character:MoveTo(OldPos) end end)
-end)
-BP:Toggle("无 Screech", "NCH", false, function(NCH)
-    _G.NS = (NCH and true or false) workspace.CurrentCamera.ChildAdded:Connect(function(child) if child.Name == "Screech" and _G.NS == true then child:Destroy() end end)
-end)
+结束)
+BP:Toggle("无尖叫”，“NCH”，假，功能(NCH)
+_G.NS = (NCH和真或假)工作空间。current camera . child added:Connect(function(child)if child。name = = " screek " and _ G . NS = = true then child:Destroy()end end)
+结束)
 
-LLCQ:Toggle("自动比赛开关", "AR", false, function(AR)
-  while AR do wait() wait(2) game:GetService("ReplicatedStorage").rEvents.brawlEvent:FireServer("joinBrawl") end
-end)
-LLCQ:Toggle("自动举哑铃", "ATYL", false, function(ATYL)
-  local part = Instance.new('Part', workspace) part.Size = Vector3.new(500, 20, 530.1) part.Position = Vector3.new(0, 100000, 133.15) part.CanCollide = true part.Anchored = true local rs = game:GetService("RunService").RenderStepped while ATYL do wait() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = part.CFrame + Vector3.new(0, 50, 0) for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do if v.ClassName == "Tool" and v.Name == "Weight" then v.Parent = game.Players.LocalPlayer.Character end end game:GetService("Players").LocalPlayer.muscleEvent:FireServer("rep") end
+LLCQ:Toggle("自动比赛开关“，”AR“，假，函数(AR)
+而AR do wait()wait(2)game:get service(" replicated storage ")revents . brawl event:FireServer(" join brawl ")end
+结束)
+LLCQ:Toggle("自动举哑铃"，" ATYL "，false，函数(ATYL)
+local part = Instance.new('Part '，workspace)部件。Size = Vector3.new(500，20，530.1)零件。Position = Vector3.new(0，100000，133.15)零件。CanCollide =真实部分。anchored = true local RS = game:get service(" run service ")。在ATYL做wait()游戏时RenderStepped。players . local player . character . humanoidrootpart . c frame = part。CFrame + Vector3.new(0，50，0)用于I，v成对(游戏。players . local player . backpack:get children())do如果v.ClassName == "Tool "和v.Name == "Weight "那么v.Parent = game。Players.LocalPlayer.Character end end game:get service(" Players ")local player . muscle event:FireServer(" rep ")end。
 end)
 LLCQ:Toggle("自动俯卧撑", "ATFWC", false, function(ATFWC)
   local part = Instance.new('Part', workspace) part.Size = Vector3.new(500, 20, 530.1) part.Position = Vector3.new(0, 100000, 133.15) part.CanCollide = true part.Anchored = true local rs = game:GetService("RunService").RenderStepped while ATFWC do wait() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = part.CFrame + Vector3.new(0, 50, 0) for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do if v.ClassName == "Tool" and v.Name == "Pushups" then v.Parent = game.Players.LocalPlayer.Character end end game:GetService("Players").LocalPlayer.muscleEvent:FireServer("rep") end
